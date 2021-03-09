@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Soft Skills</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scade=1.0">
+    <title>@ViewBag.Title - SOFT SKILLS</title>
+    @using Microsoft.AspNet.Identity
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/demo.css")
+    @Styles.Render("~/Content/style1.css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <style>
+        hr.newRed{
+            height:5px;
+            background-color: #B0002D;
+            border: none;
+            margin:0px;
+            margin-bottom:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="col-md-12 text-center logo_inicialHeader">
+                    <a href='@Url.Action("Index", "Home")'>
+                        <div style='width:250px;height:50px;'>
+                            <p><img class="img-responsive" src="~/Content/Imagenes/logo-header.png" border="0" width="1280" height="1000" style="padding-top:10px;" /></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav"></ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
+    <div class="container containerA">
+        @RenderBody()
+    </div>
+    <div class="container containerA navbar-inverse col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-top:-10px;bottom:0px;">
+        <hr class="newRed" />
+        <!--<div class="logo-footer"> </div>-->
+        <div class="info-footer">
+            Desarrollado por:
+            <a href="http://contentgrp.com/" target="_blank" style="background-color:transparent;color:#fff;">Content Group</a>
+        </div>
+        <br>
+        <div class="info-footer">
+            <a href="http://contentgrp.com/" target="_blank" style="background-color:transparent;color:#fff;">Politicas de privacidad</a>
+        </div>
+        <br>
+        <div class="info-footer">
+            <a href="http://contentgrp.com/" target="_blank" style="background-color:transparent;color:#fff;">Terminos y condiciones</a>
+            <br>
+        </div>
+    </div>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

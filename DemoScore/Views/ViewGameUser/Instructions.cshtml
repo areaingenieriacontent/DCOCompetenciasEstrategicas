@@ -1,0 +1,375 @@
+﻿@using DemoScore.Models.ViewModel;
+@model UserPreviw
+@Scripts.Render("~/bundles/jqueryval")
+
+@if (TempData["Info"] != null)
+{
+    @section Scripts {
+        @if (TempData["ultimo"] != null)
+        {
+            <script type="text/JavaScript">
+                $(document).ready(function () {
+                    $("#DeleteInfo2").modal();
+                });
+            </script>
+        }
+        else
+        {
+            <script type="text/JavaScript">
+                $(document).ready(function () {
+                    $("#DeleteInfo").modal();
+                });
+            </script>
+        }
+    }
+}
+
+@if (TempData["Info1"] != null)
+{
+    @section Scripts {
+        @if (TempData["ultimo"] != null)
+        {
+            <script type="text/JavaScript">
+                $(document).ready(function () {
+                    $("#DeleteInfo2").modal();
+                });
+            </script>
+        }
+        else
+        {
+            <script type="text/JavaScript">
+                $(document).ready(function () {
+                    $("#DeleteInfo1").modal();
+                });
+            </script>
+        }
+    }
+}
+@*
+    @if (TempData["ultimo"] != null)
+    {
+        @section Scripts {
+            <script type="text/JavaScript">
+                $(document).ready(function () {
+                    $("#DeleteInfo2").modal();
+                });
+            </script>
+        }
+    }
+*@
+@* @if (TempData["Info1"] != null)
+    {
+
+    }
+    else
+    {
+        if (TempData["Info2"] != null)
+        {
+
+        }
+        else
+        {
+            if (TempData["Ultimo"] != null)
+            {
+
+            }
+            else
+            {
+                if (Model.setting.Sett_Audio1 != null)
+                {
+                    <!--<audio src="~/ResourceGame/@Model.setting.Sett_Audio1" autoplay loop></audio>-->
+                }
+            }
+        }
+    }
+*@
+<div id="DeleteInfo" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <h1 style="color:red"> @TempData["Info"]</h1>
+                <br />
+                @*@if (TempData["ultimo"] != null)
+                    {
+                        if (Model.setting.Sett_Audio5 != null)
+                        {
+                        <audio src="~/ResourceGame/@Model.setting.Sett_Audio5" autoplay loop></audio>
+                        <h1 style="color:red"> @TempData["ultimo"]</h1>
+                        }
+                    }*@
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="DeleteInfo1" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <h1 style="color:red"> @TempData["Info1"]</h1>
+                <br />
+                @if (TempData["Info1"] != null)
+                {
+
+
+
+                    if (Model.setting.Sett_Audio2 != null)
+                    {
+                        @*<audio src="~/ResourceGame/@Model.setting.Sett_Audio2" autoplay loop></audio>*@
+                    }
+                }
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="DeleteInfo2" class="modal fade" role="dialog">
+    <div class="modal-dialog2">
+        <div class="modal-content2">
+            <div class="modal-header2">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal1-title"></h4>
+            </div>
+            <div class="modal1-body">
+                <h1 style="color:red"> @TempData["Info2"]</h1>
+                <br />
+                @if (TempData["ultimo"] != null)
+                {
+                    if (Model.setting.Sett_Audio5 != null)
+                    {
+                        @*<audio src="~/ResourceGame/@Model.setting.Sett_Audio5" autoplay loop></audio>*@
+                        <br /><br /><br /><br />
+
+                                          <div style="background: white; margin: 0 auto; width: 600px; margin-top: 8%;">
+                                              <h1 style="font-size:30px; color:#bc112e; padding:25px"> @TempData["ultimo"]</h1>
+                                          </div>
+                        if (TempData["ultimo1"] != null)
+                        {
+                          <div style="background: white; margin: 0 auto; width: 600px;">
+                            <h1 style="font-size:25px; color:#bc112e;padding:30px"> @TempData["ultimo1"]</h1>
+                            </div>
+                        }
+                    }
+                    <script type="text/javascript">
+                        //<![CDATA[
+                        (function () {
+
+                            (function () {
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                var Confetti, PI_2, canvas, colors, confetti, context, drawCircle, i, range, resizeWindow, xpos;
+
+                                canvas = document.getElementById("confeti");
+
+                                context = canvas.getContext("2d");
+
+                                window.w = window.innerWidth;
+
+                                window.h = window.innerHeight;
+
+                                resizeWindow = function () {
+                                    window.w = canvas.width = window.innerWidth;
+                                    return window.h = canvas.height = window.innerHeight;
+                                };
+
+                                window.addEventListener('resize', resizeWindow, false);
+
+                                window.onload = function () {
+                                    return setTimeout(resizeWindow, 0);
+                                };
+
+                                range = function (a, b) {
+                                    return (b - a) * Math.random() + a;
+                                };
+
+                                colors = [[85, 71, 106], [174, 61, 99], [219, 56, 83], [244, 92, 68], [248, 182, 70]];
+
+                                PI_2 = 2 * Math.PI;
+
+                                drawCircle = function (x, y, r, style) {
+                                    context.beginPath();
+                                    context.arc(x, y, r, 0, PI_2, false);
+                                    context.fillStyle = style;
+                                    return context.fill();
+                                };
+
+                                xpos = 0.5;
+
+                                document.onmousemove = function (e) {
+                                    return xpos = e.pageX / w;
+                                };
+
+                                window.requestAnimationFrame = (function () {
+                                    return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (callback) {
+                                        return window.setTimeout(callback, 1000 / 60);
+                                    };
+                                })();
+
+                                Confetti = (function () {
+
+                                    function Confetti() {
+                                        this.style = colors[~~range(0, 5)];
+                                        this.rgb = "rgba(" + this.style[0] + "," + this.style[1] + "," + this.style[2];
+                                        this.r = ~~range(2, 6);
+                                        this.replace();
+                                    }
+
+                                    Confetti.prototype.replace = function () {
+                                        this.opacity = 0;
+                                        this.dop = 0.03 * range(1, 5);
+                                        this.x = range(-2 * this.r, w - 2 * this.r);
+                                        this.y = range(-2 * this.r, h - 2 * this.r);
+                                        this.xmax = w - this.r;
+                                        this.ymax = h - this.r;
+                                        this.vx = 2 * Math.random() + 10 * xpos - 6;
+                                        return this.vy = this.r + range(-1, 1);
+                                    };
+
+                                    Confetti.prototype.draw = function () {
+                                        var _ref;
+                                        this.x += this.vx;
+                                        this.y += this.vy;
+                                        this.opacity += this.dop;
+                                        if (this.opacity > 1) {
+                                            this.opacity = 1;
+                                            this.dop *= -1;
+                                        }
+                                        if (this.opacity < 0 || this.y > this.ymax || !((0 < (_ref = this.x) && _ref < this.xmax))) {
+                                            this.replace();
+                                        }
+                                        return drawCircle(~~this.x, ~~this.y, this.r, "" + this.rgb + "," + this.opacity + ")");
+                                    };
+
+                                    return Confetti;
+
+                                })();
+
+                                confetti = (function () {
+                                    var _results;
+                                    _results = [];
+                                    for (i = 1; i <= 300; i++) {
+                                        _results.push(new Confetti);
+                                    }
+                                    return _results;
+                                })();
+
+                                window.step = function () {
+                                    var c, _i, _len, _results;
+                                    requestAnimationFrame(step);
+                                    context.clearRect(0, 0, w, h);
+                                    _results = [];
+                                    for (_i = 0, _len = confetti.length; _i < _len; _i++) {
+                                        c = confetti[_i];
+                                        _results.push(c.draw());
+                                    }
+                                    return _results;
+                                };
+
+                                step();
+
+                            }).call(this);
+
+                        })();
+//]]>
+                    </script>
+                }
+
+            </div>
+
+            <div class="modal1-footer" style="background:white; margin: 0 auto; width: 600px; padding:25px">
+                @if (TempData["ultimo"] != null)
+                {
+                    if (Model.setting.Sett_Audio5 != null)
+                    {
+                        @*<audio src="~/ResourceGame/@Model.setting.Sett_Audio5" autoplay loop></audio>*@
+                        <button type="button" class="btn btn-default" style="background: #bc112e;color: white; font-size: 20px;border-radius: 20px;" data-dismiss="modal">Cerrar</button>
+
+                        if (TempData["ultimo1"] != null)
+                        {
+                            <a onclick="eliminarCookies();"><button style="background: #bc112e;color: white; font-size: 20px;border-radius: 20px;" type="button" class="btn btn-default" >Regresar a la comunidad</button></a>
+
+                        }
+                    }
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+<body style="background:url(../../ImgTemplate/@Model.setting.MG_Template.Plant_Img_instructions); background-size: cover;background-position: center center;background-repeat: no-repeat;background-attachment: fixed;">
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <div class="col-md-4">
+        <div style="background: #b0002d5c;margin-top:26%;padding: 20px;">
+            <h1>
+                Para acceder a las preguntas, de click sobre los iconos listados en el centro de la pantalla, tenga en cuenta que debe seleccionar el icono que contenga un número</h1>
+    
+        </div>
+    </div>
+    <div class="preguntas2 col-md-4" style="left:480px;">
+        <br /><br /><br />
+        @while (Model.initial < Model.countquestion)
+        {
+            var numimg = Model.initial + 1;
+            var img = "Nivel" + numimg + ".png";
+            <div class="col-md-4">
+                @if (Model.contador == Model.initial)
+                {
+                    <a href="@Url.Action("Question", "ViewGameUser")">
+                        <img src="~/ResourceGame/@img" class="img-responsive" />
+                    </a>
+                }
+                else if (Model.contador < Model.initial)
+                {
+                    <img src="~/ResourceGame/Pregunta.png" class="img-responsive" />
+                }
+                else
+                {
+                    <img src="~/ResourceGame/Bien.png" class="img-responsive" />
+                }
+            </div>
+            Model.initial = Model.initial + 1;
+        }
+    </div>
+
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4" style="left:100px;">
+        <div class="col-md-3" style="background:url(../../ResourceGame/Niveles.png);background-repeat: no-repeat;width:310px;height:135px;">
+            <br /><br /><br /><br /><br />
+            <h7><span id="seg" style="font-size:60px;">@Model.attemptUser de 3</span></h7>
+        </div>
+        <div class="col-md-12">
+            <br /><br /><br />
+        </div>
+    </div>
+</body>
+<script>
+
+    function eliminarCookies() {
+
+
+          document.cookie.split(";").forEach(function (c) {
+              document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+              var url = 'https://aprendeyavanza2.com.co/bureauveritastrainingcommunity/home/loginexterno?id=@ViewData["usuario"]';
+              console.log(url);
+              window.location.assign(url);
+
+        });
+      }
+        $('#clear').click(function () {
+            eliminarCookies();
+
+        });
+
+</script>
