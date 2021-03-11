@@ -2,7 +2,8 @@
 @model DemoScore.Models.LoginViewModel
     <div class="jumbotron1" style="background-color:transparent">
         <br />
-
+        <br /><br /><br />
+        <br /><br /><br />
         @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
         {
             @Html.AntiForgeryToken()
@@ -28,7 +29,6 @@
                 @*@Html.ActionLink("Registrar", "Register", "Account", routeValues: null, htmlAttributes:  new { @class = "btn btn-info" })*@
 
             </div>
-            <br /><br /><br />
             <br /><br /><br />
         }
     </div>
