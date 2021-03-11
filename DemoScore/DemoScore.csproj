@@ -319,6 +319,7 @@
     <Content Include="Content\Imagenes\background-loading.jpg" />
     <Content Include="Content\Imagenes\background-login-bureau.jpg" />
     <Content Include="Content\Imagenes\banner1.jpg" />
+    <Content Include="Content\Imagenes\favicon.ico" />
     <Content Include="Content\Imagenes\Gif.gif" />
     <Content Include="Content\Imagenes\LOGO DCO-15.png" />
     <Content Include="Content\Imagenes\logo-header.png" />
