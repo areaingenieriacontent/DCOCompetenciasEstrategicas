@@ -75,7 +75,7 @@ namespace DemoScore.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DCOCompetenciasEstrategicas", throwIfV1Schema: false)
+            : base("DCOConexionTurismo", throwIfV1Schema: false)
         {
         }
 
