@@ -1015,7 +1015,6 @@ C:\Inetpub\wwwroot\Plataforma DCO Conexion Turismo\DCOCompetenciasEstrategicas\D
 C:\Inetpub\wwwroot\Plataforma DCO Conexion Turismo\DCOCompetenciasEstrategicas\DemoScore\bin\System.Web.WebPages.xml
 C:\Inetpub\wwwroot\Plataforma DCO Conexion Turismo\DCOCompetenciasEstrategicas\DemoScore\bin\System.Web.WebPages.Deployment.xml
 C:\Inetpub\wwwroot\Plataforma DCO Conexion Turismo\DCOCompetenciasEstrategicas\DemoScore\bin\System.Web.WebPages.Razor.xml
-C:\Inetpub\wwwroot\Plataforma DCO Conexion Turismo\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.csprojAssemblyReference.cache
 C:\Inetpub\wwwroot\Plataforma DCO Conexion Turismo\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.Migrations.test.resources
 C:\Inetpub\wwwroot\Plataforma DCO Conexion Turismo\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.Migrations.mensajebienv.resources
 C:\Inetpub\wwwroot\Plataforma DCO Conexion Turismo\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.Migrations.mensajebienv1.resources
