@@ -1531,8 +1531,8 @@ table th[class*="col-"] {
 .table > thead > tr.success > th,
 .table > tbody > tr.success > th,
 .table > tfoot > tr.success > th {
-  background-color: #B0002D;
-  border-color: #d6e9c6;
+    background-color: #006695;
+    border-color: #d6e9c6;
 }
 
 .table-hover > tbody > tr > td.success:hover,
@@ -1920,9 +1920,9 @@ textarea.input-lg {
 }
 
 .has-success .input-group-addon {
-  color: #468847;
-  background-color: #B0002D;
-  border-color: #468847;
+    color: #468847;
+    background-color: #006695;
+    border-color: #468847;
 }
 
 .form-control-static {
@@ -5041,9 +5041,9 @@ a.thumbnail:focus {
 }
 
 .alert-success {
-  color: #468847;
-  background-color: #B0002D;
-  border-color: #d6e9c6;
+    color: #468847;
+    background-color: #006695;
+    border-color: #d6e9c6;
 }
 
 .alert-success hr {
@@ -5483,11 +5483,11 @@ a.list-group-item:focus {
   border-color: #d6e9c6;
 }
 
-.panel-success > .panel-heading {
-  color: #468847;
-  background-color: #B0002D;
-  border-color: #d6e9c6;
-}
+    .panel-success > .panel-heading {
+        color: #468847;
+        background-color: #006695;
+        border-color: #d6e9c6;
+    }
 
 .panel-success > .panel-heading + .panel-collapse .panel-body {
   border-top-color: #d6e9c6;

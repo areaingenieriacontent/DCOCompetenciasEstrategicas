@@ -18,7 +18,7 @@
     <li style=" height: 80px; align-content: center;">
         <a onclick="eliminarCookies();"><button style="background-color:transparent; color:white; border:none" type="button" class="btn btn-default">Regresar a la comunidad</button></a>
     </li>
-    <li style="background-color:#B0002D;">
+    <li style="background-color:#006695;">
         <img src="~/Content/Imagenes/user.png" height="80" style="
             padding-bottom: 10px;
             padding-top: 20px;
@@ -26,7 +26,7 @@
             ">
     </li>
 
-    <li style="background-color: #B0002D; height: 80px; align-content: center;">
+    <li style="background-color: #006695; height: 80px; align-content: center;">
         @Html.ActionLink("Hola " + Session["FirstName"] + " " + Session["LastName"] + "!", "", "", routeValues: null, htmlAttributes: new { title = "Manage", @style = "background-color:transparent;color:#fff;" })
     </li>
     <li>
