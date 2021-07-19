@@ -297,7 +297,7 @@
 
                         if (TempData["ultimo1"] != null)
                         {
-                            <a onclick="eliminarCookies();"><button style="background: #bc112e;color: white; font-size: 20px;border-radius: 20px;" type="button" class="btn btn-default" >Regresar a la comunidad</button></a>
+                            <a onclick="eliminarCookies();"><button style="background: #bc112e;color: white; font-size: 20px;border-radius: 20px;" type="button" class="btn btn-default" >Regresar a la Plataforma</button></a>
 
                         }
                     }
@@ -308,12 +308,33 @@
     </div>
 </div>
 <body style="background:url(../../ImgTemplate/@Model.setting.MG_Template.Plant_Img_instructions); background-size: cover;background-position: center center;background-repeat: no-repeat;background-attachment: fixed;">
-    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br />
     <div class="col-md-4">
         <div style="background: #b0002d5c;margin-top:26%;padding: 20px;">
             <h1>
-                Para acceder a las preguntas, de click sobre los iconos listados en el centro de la pantalla, tenga en cuenta que debe seleccionar el icono que contenga un número</h1>
-    
+                Para acceder a las preguntas, de click sobre los iconos listados en el centro de la pantalla, tenga en cuenta que debe seleccionar el icono que contenga un número
+            </h1>
+            <br />
+            <h1> <a href="~/Content/Doc_DCO/ContextosDCOCompentenciasEstrategicas.pdf" download="Competencias Estrategicas Cartilla.pdf">Descargar Cartilla de contexto de preguntas</a></h1>
+            <br />
+            @*
+            <h1> <a href="~/Content/Doc_DCO/Competencias_ciudadanas-Pregunta2.pdf" download="Competencias Ciudadanas - Pregunta 2.pdf">Descargar Pregunta 2 - Competencias Ciudadanas</a></h1>
+            <br />
+            <h1> <a href="~/Content/Doc_DCO/Competencias_ciudadanas-Pregunta3.pdf" download="Competencias Ciudadanas - Pregunta 3.pdf">Descargar Pregunta 3 - Competencias Ciudadanas</a></h1>
+            <br />
+            <h1> <a href="~/Content/Doc_DCO/Competencias_ciudadanas-Pregunta4.pdf" download="Competencias Ciudadanas - Pregunta 4.pdf">Descargar Pregunta 4 - Competencias Ciudadanas</a></h1>
+            <br />
+            <h1> <a href="~/Content/Doc_DCO/Competencias_ciudadanas-Pregunta5.pdf" download="Competencias Ciudadanas - Pregunta 5.pdf">Descargar Pregunta 5 - Competencias Ciudadanas</a></h1>
+            <br />
+            <h1> <a href="~/Content/Doc_DCO/Ingles-Pregunta1_y_2.pdf" download="Ingles - Pregunta 1 y 2.pdf">Descargar Pregunta 1 y 2 - Ingles</a></h1>
+            <br />
+            <h1> <a href="~/Content/Doc_DCO/Lectura_critica-Pregunta1.pdf" download="Lectura Critica - Pregunta 1.pdf">Descargar Pregunta 1 - Lectura Critica</a></h1>
+            <br />
+            <h1> <a href="~/Content/Doc_DCO/Lectura_critica-Preguntas2_3_y_4.pdf" download="Lectura Critica - Pregunta 2 3 y 4.pdf">Descargar Pregunta 2, 3 y 4 - Lectura Critica</a></h1>
+            <br />
+            <h1> <a href="~/Content/Doc_DCO/Lectura_critica-Pregunta5.pdf" download="Lectura Critica - Pregunta 5.pdf">Descargar Pregunta 5 - Lectura Critica</a></h1>
+            <br />
+            <h1> <a href="~/Content/Doc_DCO/Razonamiento_Cuantitativo-Pregunta5.pdf" download="Razonamiento Cuantitativo - Pregunta 5.pdf">Descargar Pregunta 5 - Razonamiento Cuantitativo</a></h1>*@
         </div>
     </div>
     <div class="preguntas2 col-md-4" style="left:480px;">
@@ -361,7 +382,7 @@
 
           document.cookie.split(";").forEach(function (c) {
               document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
-              var url = 'https://aprendeyavanza2.com.co/bureauveritastrainingcommunity/home/loginexterno?id=@ViewData["usuario"]';
+              var url = 'https://aprendeyavanza2.com.co/CompetenciasEstrategicas/home/loginexterno?id=@ViewData["usuario"]';
               console.log(url);
               window.location.assign(url);
 

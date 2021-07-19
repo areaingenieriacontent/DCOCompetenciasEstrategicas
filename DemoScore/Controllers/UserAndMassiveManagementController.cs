@@ -270,7 +270,7 @@ namespace DemoScore.Controllers
                 "<br/><br/>" +
                 "<br/>" + "Usuario: " + Usuario +
                 "<br/>" + "Contraseña: " + Usuario +
-                "<br/><br/>" + "link:" + "https://www.aprendeyavanza2.com.co/bureauveritastrainingcommunity/" +
+                "<br/><br/>" + "link:" + "https://www.aprendeyavanza2.com.co/CompetenciasEstrategicas/" +
                 "<br/>" + "Para una correcta visualización de los contenidos use el navegador Chrome" + "<br/>" +
                 "<br/>" + "Bureau Veritas - Content";
 

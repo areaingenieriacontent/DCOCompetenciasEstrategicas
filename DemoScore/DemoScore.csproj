@@ -418,8 +418,23 @@
     <Content Include="ResourceGame\Nivel13.png" />
     <Content Include="ResourceGame\Nivel14.png" />
     <Content Include="ResourceGame\Nivel15.png" />
+    <Content Include="ResourceGame\Nivel16.png" />
+    <Content Include="ResourceGame\Nivel17.png" />
+    <Content Include="ResourceGame\Nivel18.png" />
+    <Content Include="ResourceGame\Nivel19.png" />
     <Content Include="ResourceGame\Nivel2.png" />
+    <Content Include="ResourceGame\Nivel20.png" />
+    <Content Include="ResourceGame\Nivel21.png" />
+    <Content Include="ResourceGame\Nivel22.png" />
+    <Content Include="ResourceGame\Nivel23.png" />
+    <Content Include="ResourceGame\Nivel24.png" />
+    <Content Include="ResourceGame\Nivel25.png" />
+    <Content Include="ResourceGame\Nivel26.png" />
+    <Content Include="ResourceGame\Nivel27.png" />
+    <Content Include="ResourceGame\Nivel28.png" />
+    <Content Include="ResourceGame\Nivel29.png" />
     <Content Include="ResourceGame\Nivel3.png" />
+    <Content Include="ResourceGame\Nivel30.png" />
     <Content Include="ResourceGame\Nivel4.png" />
     <Content Include="ResourceGame\Nivel5.png" />
     <Content Include="ResourceGame\Nivel6.png" />
@@ -459,6 +474,17 @@
     <Content Include="DataSetLocal.xsc">
       <DependentUpon>DataSetLocal.xsd</DependentUpon>
     </Content>
+    <Content Include="Content\Doc_DCO\Competencias_ciudadanas-Pregunta1.pdf" />
+    <Content Include="Content\Doc_DCO\Competencias_ciudadanas-Pregunta2.pdf" />
+    <Content Include="Content\Doc_DCO\Competencias_ciudadanas-Pregunta3.pdf" />
+    <Content Include="Content\Doc_DCO\Competencias_ciudadanas-Pregunta4.pdf" />
+    <Content Include="Content\Doc_DCO\Competencias_ciudadanas-Pregunta5.pdf" />
+    <Content Include="Content\Doc_DCO\Ingles-Pregunta1_y_2.pdf" />
+    <Content Include="Content\Doc_DCO\Lectura_critica-Pregunta1.pdf" />
+    <Content Include="Content\Doc_DCO\Lectura_critica-Pregunta5.pdf" />
+    <Content Include="Content\Doc_DCO\Lectura_critica-Preguntas2_3_y_4.pdf" />
+    <Content Include="Content\Doc_DCO\Razonamiento_Cuantitativo-Pregunta5.pdf" />
+    <Content Include="Content\Doc_DCO\ContextosDCOCompentenciasEstrategicas.pdf" />
     <None Include="DataSetLocal.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>

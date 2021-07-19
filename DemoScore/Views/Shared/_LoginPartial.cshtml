@@ -16,7 +16,7 @@
             ">
     </li>
     <li style=" height: 80px; align-content: center;">
-        <a onclick="eliminarCookies();"><button style="background-color:transparent; color:white; border:none" type="button" class="btn btn-default">Regresar a la comunidad</button></a>
+        <a onclick="eliminarCookies();"><button style="background-color:transparent; color:white; border:none" type="button" class="btn btn-default">Regresar a la plataforma</button></a>
     </li>
     <li style="background-color:#B0002D;">
         <img src="~/Content/Imagenes/user.png" height="80" style="
@@ -29,7 +29,7 @@
     <li style="background-color: #B0002D; height: 80px; align-content: center;">
         @Html.ActionLink("Hola " + Session["FirstName"] + " " + Session["LastName"] + "!", "", "", routeValues: null, htmlAttributes: new { title = "Manage", @style = "background-color:transparent;color:#fff;" })
     </li>
-    <li>
+    @*<li>
         <img src="~/Content/Imagenes/logout.png" height="80" style="
             padding-bottom: 10px;
             padding-top: 20px;
@@ -39,7 +39,7 @@
     <li>
         <a href="javascript:document.getElementById('logoutForm').submit()" style="background-color: transparent;
         color: #fff;">Cerrar Sesión</a>
-    </li>
+    </li>*@
 </ul>
             }
             }
@@ -56,7 +56,7 @@
               document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
               var id = @ViewData["usuario"];
               debugger
-              var url = 'https://aprendeyavanza2.com.co/bureauveritastrainingcommunity/home/loginexterno?id=' + id;
+              var url = 'https://aprendeyavanza2.com.co/CompetenciasEstrategicas/home/loginexterno?id=' + id;
               console.log(url);
               debugger
               window.location.assign(url);

@@ -15,6 +15,9 @@
               <Width>1.80938in</Width>
             </TablixColumn>
             <TablixColumn>
+              <Width>1in</Width>
+            </TablixColumn>
+            <TablixColumn>
               <Width>1.55938in</Width>
             </TablixColumn>
             <TablixColumn>
@@ -129,6 +132,40 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox26</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox4">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Fecha</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox4</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -477,6 +514,37 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="firstAccess">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!firstAccess.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>firstAccess</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <rd:Selected>true</rd:Selected>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="Cate_Description">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -701,6 +769,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -717,7 +786,7 @@
         <Top>0.22444in</Top>
         <Left>0.09501in</Left>
         <Height>0.68469in</Height>
-        <Width>9.65043in</Width>
+        <Width>10.65043in</Width>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -748,7 +817,7 @@
     <Height>1.09856in</Height>
     <Style />
   </Body>
-  <Width>9.92073in</Width>
+  <Width>10.74544in</Width>
   <Page>
     <PageHeader>
       <Height>1.62188in</Height>
@@ -1558,6 +1627,10 @@
           <DataField>Email</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="firstAccess">
+          <DataField>firstAccess</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
         <Field Name="Cate_Description">
           <DataField>Cate_Description</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -1589,11 +1662,11 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetLocal</rd:DataSetName>
-        <rd:SchemaPath>C:\Inetpub\wwwroot\DcoBureau\DemoScore\DemoScore\DataSetLocal.xsd</rd:SchemaPath>
-        <rd:TableName>PROC_REP_PROCESS_USER1</rd:TableName>
+        <rd:SchemaPath>C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\DataSetLocal.xsd</rd:SchemaPath>
+        <rd:TableName>PROC_REP_PROCESS_USER_DATE</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>PROC_REP_PROCESS_USER1TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>PROC_REP_PROCESS_USER_DATETableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
