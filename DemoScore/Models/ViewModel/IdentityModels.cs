@@ -87,6 +87,7 @@ namespace DemoScore.Models
         public virtual DbSet<MG_AnswerMultipleChoice> MG_AnswerMultipleChoices { get; set; }
         public virtual DbSet<MG_AnswerUser> MG_AnswerUsers { get; set; }
         public virtual DbSet<MG_MultipleChoice> MG_MultipleChoices { get; set; }
+        public virtual DbSet<MG_Context> MG_Contexts { get; set; }
         public virtual DbSet<MG_SettingMp> MG_SettingMps { get; set; }
         public virtual DbSet<MG_Template> MG_Templates { get; set; }
         public virtual DbSet<Nivel> Nivels { get; set; }

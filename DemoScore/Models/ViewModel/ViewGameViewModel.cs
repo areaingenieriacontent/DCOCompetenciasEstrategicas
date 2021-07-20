@@ -1,4 +1,5 @@
 ﻿using Chart.Mvc.ComplexChart;
+using DemoScore.Models.Game;
 using SCORM1.Models.MainGame;
 using System;
 using System.Collections.Generic;
@@ -126,6 +127,7 @@ namespace DemoScore.Models.ViewModel
         public int AnMul_ID { get; set; }
         public List<MG_AnswerMultipleChoice> listanswerM { get; set; }
         public int nivel { get; set; }
+        public MG_Context Contexto { get; set; }
     }
 
     public class listranking

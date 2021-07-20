@@ -278,11 +278,20 @@
     <Compile Include="Migrations\202001272056304_level-quantity-company.Designer.cs">
       <DependentUpon>202001272056304_level-quantity-company.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202107191824154_context.cs" />
+    <Compile Include="Migrations\202107191824154_context.Designer.cs">
+      <DependentUpon>202107191824154_context.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107192116227_context1.cs" />
+    <Compile Include="Migrations\202107192116227_context1.Designer.cs">
+      <DependentUpon>202107192116227_context1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Game\Area.cs" />
     <Compile Include="Models\Game\Cargo.cs" />
     <Compile Include="Models\Game\Categoria.cs" />
     <Compile Include="Models\Game\Ciudad.cs" />
+    <Compile Include="Models\Game\MG_Context.cs" />
     <Compile Include="Models\Game\Nivel.cs" />
     <Compile Include="Models\Game\Company.cs" />
     <Compile Include="Models\Game\MG_AnswerMultipleChoice.cs" />
@@ -349,7 +358,11 @@
     <Content Include="ImgTemplate\20171006164344-mesa de trabajo 1 copia.png" />
     <Content Include="ImgTemplate\CUADROPREGUNTA %281%29.png" />
     <Content Include="ImgTemplate\CUADROPREGUNTA%282%29.png" />
+    <Content Include="ImgTemplate\CUADROPREGUNTA%283%29 - Copy.png" />
     <Content Include="ImgTemplate\CUADROPREGUNTA%283%29.png" />
+    <Content Include="ImgTemplate\CUADROPREGUNTA%283%291.png" />
+    <Content Include="ImgTemplate\CUADROPREGUNTA%283%292.png" />
+    <Content Include="ImgTemplate\CUADROPREGUNTA%283%293.png" />
     <Content Include="ImgTemplate\CUADROPREGUNTA.png" />
     <Content Include="ImgTemplate\Fondo_Aarillo.png" />
     <Content Include="ImgTemplate\Fondo_Azul.png" />
@@ -643,6 +656,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001272056304_level-quantity-company.resx">
       <DependentUpon>202001272056304_level-quantity-company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107191824154_context.resx">
+      <DependentUpon>202107191824154_context.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107192116227_context1.resx">
+      <DependentUpon>202107192116227_context1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Rep_Category.rdlc">
       <SubType>Designer</SubType>

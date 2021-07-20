@@ -42,11 +42,12 @@
         for (int i = 0; i < Model.listquestionsselect.Count; i++)
         {
             <div class="preguntas col-md-12" align="center">
-                <div style="background:url('../ImgTemplate/CUADROPREGUNTA(3).png');background-repeat: no-repeat; width:600px;height:230px;padding:10px;">
+                <div style="background:url('../ImgTemplate/CUADROPREGUNTA(3).png');background-repeat: no-repeat; width:1080px;height:440px;padding:10px;">
                     @if (@Model.listquestionsselect[i].MuCh_Description != null)
                     {
-                        <br /><br /><br />
-                        <h1> @Model.listquestionsselect[i].MuCh_Description</h1>
+                        <br /><br /><br /><br /><br />
+                        <h1 aling="justify">@Model.listquestionsselect[i].Contexto.Contex_Desc</h1>
+                        <h1>@Model.listquestionsselect[i].MuCh_Description</h1>
                     }
                     else
                     {

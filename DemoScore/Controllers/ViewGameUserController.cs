@@ -253,7 +253,9 @@ namespace DemoScore.Controllers
                         MuCh_ImageQuestion = item1.MuCh_ImageQuestion,
                         Cate_Id = item1.Cate_Id,
                         listanswerM = item1.MG_AnswerMultipleChoice.ToList(),
-                        nivel = item1.Nivel_Id
+                        nivel = item1.Nivel_Id,
+                        Contexto = item1.MG_Context
+
                     });
 
                 }
@@ -355,7 +357,7 @@ namespace DemoScore.Controllers
                             };
                             ApplicationDbContext.MG_AnswerUsers.Add(antiguo);
                             ApplicationDbContext.SaveChanges();
-                            TempData["Info1"] = "Respuesta Guardada.";
+                            //TempData["Info1"] = "Respuesta Guardada.";
                         }
 
                     }
@@ -374,7 +376,7 @@ namespace DemoScore.Controllers
                         };
                         ApplicationDbContext.MG_AnswerUsers.Add(nuevo);
                         ApplicationDbContext.SaveChanges();
-                        TempData["Info1"] = "Respuesta Guardada.";
+                        //TempData["Info1"] = "Respuesta Guardada.";
                     }
                 }
                 else
@@ -434,7 +436,7 @@ namespace DemoScore.Controllers
                             };
                             ApplicationDbContext.MG_AnswerUsers.Add(antiguo);
                             ApplicationDbContext.SaveChanges();
-                            TempData["Info1"] = "Respuesta Guardada.";
+                            //TempData["Info1"] = "Respuesta Guardada.";
                         }
 
                     }
@@ -453,7 +455,7 @@ namespace DemoScore.Controllers
                         };
                         ApplicationDbContext.MG_AnswerUsers.Add(nuevo);
                         ApplicationDbContext.SaveChanges();
-                        TempData["Info1"] = "Respuesta Guardada.";
+                        //TempData["Info1"] = "Respuesta Guardada.";
                     }
                     ApplicationDbContext.SaveChanges();
 

@@ -1,4 +1,5 @@
 ﻿using DemoScore.Models;
+using DemoScore.Models.Game;
 using DemoScore.Models.ViewModel;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -86,13 +87,15 @@ namespace DemoScore.Controllers
             List<MultipleChoiceselect> listselect = new List<MultipleChoiceselect>();
             if (question != null)
             {
+                MG_Context contexto = ApplicationDbContext.MG_Contexts.Find(question.Contex_Id);
                 listselect.Add(new MultipleChoiceselect
                 {
                     MuCh_ID = question.MuCh_ID,
                     MuCh_Description = question.MuCh_Description,
                     MuCh_ImageQuestion = question.MuCh_ImageQuestion,
                     Sett_Id = question.Sett_Id,
-                    listanswerM = question.MG_AnswerMultipleChoice.ToList()
+                    listanswerM = question.MG_AnswerMultipleChoice.ToList(),
+                    Contexto = contexto
                 });
                 QuestionSelect model = new QuestionSelect
                 {

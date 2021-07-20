@@ -35,6 +35,11 @@ namespace SCORM1.Models.MainGame
         public int Sett_Id { get; set; }
         public virtual MG_SettingMp MG_SettingMp { get; set; }
 
+        [ForeignKey("MG_Context")]
+        [Display(Name ="IdContext")]
+        public int Contex_Id { get; set; }
+        public virtual MG_Context MG_Context { get; set; }
+
         public virtual ICollection<MG_AnswerMultipleChoice> MG_AnswerMultipleChoice { get; set; }
     }
 }
