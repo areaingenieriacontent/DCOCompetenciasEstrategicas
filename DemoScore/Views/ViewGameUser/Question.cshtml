@@ -45,8 +45,9 @@
                 <div style="background:url('../ImgTemplate/CUADROPREGUNTA(3).png');background-repeat: no-repeat; width:1080px;height:440px;padding:10px;">
                     @if (@Model.listquestionsselect[i].MuCh_Description != null)
                     {
-                        <br /><br /><br /><br /><br />
-                        <h1 aling="justify">@Model.listquestionsselect[i].Contexto.Contex_Desc</h1>
+                        <br /><br /><br /><br /><br /><br />
+                        <h1>@Model.listquestionsselect[i].Contexto.Contex_Desc</h1>
+                        <br />
                         <h1>@Model.listquestionsselect[i].MuCh_Description</h1>
                     }
                     else
@@ -58,7 +59,7 @@
             <div class="col-md-12">
                 <div class="jumbotron3">
                     <div class="col-md-12">
-                        <br /><br /><br /><br /><br />
+                        <br /><br /><br />
                     </div>
                 </div>
             </div>

@@ -323,7 +323,7 @@ namespace DemoScore.Controllers
                             };
                             ApplicationDbContext.MG_AnswerUsers.Add(antiguo);
                             ApplicationDbContext.SaveChanges();
-                            TempData["Info1"] = "Respuesta Correcta.";
+                            //TempData["Info1"] = "Respuesta Correcta.";
                         }
                         if (att == 14)
                         {
@@ -402,7 +402,7 @@ namespace DemoScore.Controllers
                             };
                             ApplicationDbContext.MG_AnswerUsers.Add(antiguo);
                             ApplicationDbContext.SaveChanges();
-                            TempData["Info1"] = "Respuesta Correcta.";
+                            //TempData["Info1"] = "Respuesta Correcta.";
                         }
                         if (atta == 14)
                         {
