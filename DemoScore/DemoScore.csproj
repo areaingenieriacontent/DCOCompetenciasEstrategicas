@@ -246,9 +246,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202107200735282_initial.cs" />
-    <Compile Include="Migrations\202107200735282_initial.Designer.cs">
-      <DependentUpon>202107200735282_initial.cs</DependentUpon>
+    <Compile Include="Migrations\202107282027173_uno.cs" />
+    <Compile Include="Migrations\202107282027173_uno.Designer.cs">
+      <DependentUpon>202107282027173_uno.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Game\Area.cs" />
@@ -597,8 +597,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202107200735282_initial.resx">
-      <DependentUpon>202107200735282_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202107282027173_uno.resx">
+      <DependentUpon>202107282027173_uno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Rep_Category.rdlc">
       <SubType>Designer</SubType>

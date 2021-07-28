@@ -4,3 +4,5 @@
 
 /.vs/DCOCompetenciasEstrategicas/v16/Server/sqlite3
 /.vs/DCOCompetenciasEstrategicas/v15/Server/sqlite3
+/DemoScore/bin
+/DemoScore/Migrations

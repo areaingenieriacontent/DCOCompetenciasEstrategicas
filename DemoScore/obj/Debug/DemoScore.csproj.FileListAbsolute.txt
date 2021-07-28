@@ -884,15 +884,6 @@ C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstra
 C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\bin\System.Web.WebPages.Deployment.xml
 C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\bin\System.Web.WebPages.Razor.xml
 C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.csprojAssemblyReference.cache
-C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.Migrations.test.resources
-C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.Migrations.mensajebienv.resources
-C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.Migrations.mensajebienv1.resources
-C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.Migrations.mensaje1.resources
-C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.Migrations.classNivel_initial.resources
-C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.Migrations.addcolumnnivelidmuch.resources
-C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.Migrations.columnstatemuch.resources
-C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.Migrations.levelquantitycompany.resources
-C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.csproj.GenerateResource.cache
 C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\RdlCompile.cache
 C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\RdlCompile.compiled
 C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.csproj.CoreCompileInputs.cache
@@ -1032,3 +1023,5 @@ D:\Content\Proyectos\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.p
 D:\Content\Proyectos\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.Migrations.context.resources
 D:\Content\Proyectos\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.Migrations.context1.resources
 D:\Content\Proyectos\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.csprojAssemblyReference.cache
+C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.Migrations.uno.resources
+C:\Inetpub\wwwroot\Plataforma DCO Competencias Estrategicas\DCOCompetenciasEstrategicas\DemoScore\obj\Debug\DemoScore.csproj.GenerateResource.cache
