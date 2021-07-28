@@ -46,7 +46,7 @@
                     @if (@Model.listquestionsselect[i].MuCh_Description != null)
                     {
                         <br /><br /><br /><br /><br /><br />
-                        <h1>@Model.listquestionsselect[i].Contexto.Contex_Desc</h1>
+                        <h1>@Html.Raw(@Model.listquestionsselect[i].Contexto.Contex_Desc)</h1>
                         <br />
                         <h1>@Model.listquestionsselect[i].MuCh_Description</h1>
                     }
