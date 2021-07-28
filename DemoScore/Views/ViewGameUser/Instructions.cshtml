@@ -1,6 +1,7 @@
 ﻿@using DemoScore.Models.ViewModel;
 @model UserPreviw
 @Scripts.Render("~/bundles/jqueryval")
+@Styles.Render("~/Content/style1.css")
 
 @if (TempData["Info"] != null)
 {
@@ -45,6 +46,27 @@
         }
     }
 }
+<style>
+    .boton {
+        border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+        padding: 15px; /*espacio alrededor texto*/
+        background-color: #65aab8; /*color botón*/
+        color: #ffffff; /*color texto*/
+        text-decoration: none; /*decoración texto*/
+        text-transform: uppercase; /*capitalización texto*/
+        font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+        font-size: medium; /*tamaño de la letra*/
+        font-weight: bold; /*estilo de fuente*/
+        border-radius: 10px; /*bordes redondos*/
+    }
+    .boton:hover{
+        background-color:#000000;
+        border: 1px solid #ff0000;
+        color: #ff0000;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+</style>
 @*
     @if (TempData["ultimo"] != null)
     {
@@ -152,13 +174,13 @@
                         @*<audio src="~/ResourceGame/@Model.setting.Sett_Audio5" autoplay loop></audio>*@
                         <br /><br /><br /><br />
 
-                                          <div style="background: white; margin: 0 auto; width: 600px; margin-top: 8%;">
-                                              <h1 style="font-size:30px; color:#bc112e; padding:25px"> @TempData["ultimo"]</h1>
-                                          </div>
+                        <div style="background: white; margin: 0 auto; width: 600px; margin-top: 8%;">
+                            <h1 style="font-size:30px; color:#bc112e; padding:25px"> @TempData["ultimo"]</h1>
+                        </div>
                         if (TempData["ultimo1"] != null)
                         {
-                          <div style="background: white; margin: 0 auto; width: 600px;">
-                            <h1 style="font-size:25px; color:#bc112e;padding:30px"> @TempData["ultimo1"]</h1>
+                            <div style="background: white; margin: 0 auto; width: 600px;">
+                                <h1 style="font-size:25px; color:#bc112e;padding:30px"> @TempData["ultimo1"]</h1>
                             </div>
                         }
                     }
@@ -281,7 +303,7 @@
                             }).call(this);
 
                         })();
-//]]>
+                        //]]>
                     </script>
                 }
 
@@ -297,7 +319,7 @@
 
                         if (TempData["ultimo1"] != null)
                         {
-                            <a onclick="eliminarCookies();"><button style="background: #bc112e;color: white; font-size: 20px;border-radius: 20px;" type="button" class="btn btn-default" >Regresar a la Plataforma</button></a>
+                            <a onclick="eliminarCookies();"><button style="background: #bc112e;color: white; font-size: 20px;border-radius: 20px;" type="button" class="btn btn-default">Regresar a la Plataforma</button></a>
 
                         }
                     }
@@ -309,35 +331,70 @@
 </div>
 <body style="background:url(../../ImgTemplate/@Model.setting.MG_Template.Plant_Img_instructions); background-size: cover;background-position: center center;background-repeat: no-repeat;background-attachment: fixed;">
     <br /><br /><br />
-    <div class="col-md-4">
-        <div style="background: #b0002d5c;margin-top:26%;padding: 20px;">
-            <h1>
-                Para acceder a las preguntas, de click sobre los iconos listados en el centro de la pantalla, tenga en cuenta que debe seleccionar el icono que contenga un número
-            </h1>
-            <br />
-            <h1> <a href="~/Content/Doc_DCO/ContextosDCOCompentenciasEstrategicas.pdf" download="Competencias Estrategicas Cartilla.pdf">Descargar Cartilla de contexto de preguntas</a></h1>
-            <br />
-            @*
-            <h1> <a href="~/Content/Doc_DCO/Competencias_ciudadanas-Pregunta2.pdf" download="Competencias Ciudadanas - Pregunta 2.pdf">Descargar Pregunta 2 - Competencias Ciudadanas</a></h1>
-            <br />
-            <h1> <a href="~/Content/Doc_DCO/Competencias_ciudadanas-Pregunta3.pdf" download="Competencias Ciudadanas - Pregunta 3.pdf">Descargar Pregunta 3 - Competencias Ciudadanas</a></h1>
-            <br />
-            <h1> <a href="~/Content/Doc_DCO/Competencias_ciudadanas-Pregunta4.pdf" download="Competencias Ciudadanas - Pregunta 4.pdf">Descargar Pregunta 4 - Competencias Ciudadanas</a></h1>
-            <br />
-            <h1> <a href="~/Content/Doc_DCO/Competencias_ciudadanas-Pregunta5.pdf" download="Competencias Ciudadanas - Pregunta 5.pdf">Descargar Pregunta 5 - Competencias Ciudadanas</a></h1>
-            <br />
-            <h1> <a href="~/Content/Doc_DCO/Ingles-Pregunta1_y_2.pdf" download="Ingles - Pregunta 1 y 2.pdf">Descargar Pregunta 1 y 2 - Ingles</a></h1>
-            <br />
-            <h1> <a href="~/Content/Doc_DCO/Lectura_critica-Pregunta1.pdf" download="Lectura Critica - Pregunta 1.pdf">Descargar Pregunta 1 - Lectura Critica</a></h1>
-            <br />
-            <h1> <a href="~/Content/Doc_DCO/Lectura_critica-Preguntas2_3_y_4.pdf" download="Lectura Critica - Pregunta 2 3 y 4.pdf">Descargar Pregunta 2, 3 y 4 - Lectura Critica</a></h1>
-            <br />
-            <h1> <a href="~/Content/Doc_DCO/Lectura_critica-Pregunta5.pdf" download="Lectura Critica - Pregunta 5.pdf">Descargar Pregunta 5 - Lectura Critica</a></h1>
-            <br />
-            <h1> <a href="~/Content/Doc_DCO/Razonamiento_Cuantitativo-Pregunta5.pdf" download="Razonamiento Cuantitativo - Pregunta 5.pdf">Descargar Pregunta 5 - Razonamiento Cuantitativo</a></h1>*@
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6" style="align-content:center">
+            <div style="background: #b0002d5c;margin-top:5%; margin-bottom:10%; padding: 20px; text-align:left; align-content:center">
+
+                <h1 style="text-align:center"><strong>¡Es tiempo de medir tus competencias estratégicas!</strong></h1><br />
+                <br />
+                <h1>
+                    A continuación, vas a encontrar dos tipos de preguntas: unas asociadas a comportamientos y otras asociadas a compresión, la cuales deberás de acuerdo con tu criterio.<br />
+                    Para responder las competencias asociadas a comportamientos, tu respuesta debe estar en términos de frecuencia con que prácticas el comportamiento en tu quehacer diario, es decir:<br />
+                    <br />
+                    •	Siempre te comportas así.<br />
+                    •	Casi siempre te comportas así.<br />
+                    •	Pocas veces te comportas así.<br />
+                    •	Nunca te comportas así.<br />
+                    <br />
+                    Para responder las preguntas de compresión deberás leer cada uno de los textos o información relacionada con la competencia, y seleccionar la opción que consideres correcta.<br />
+                    Es importante mencionar que la prueba no presupone ni exige conocimientos especiales en alguna disciplina específica, se evalúa en cambio, la capacidad de interpretar y analizar de manera coherente y apropiada los contenidos.<br />
+                    <br />
+                    <br />
+                </h1>
+                @*
+                    <h1> <a href="~/Content/Doc_DCO/Competencias_ciudadanas-Pregunta2.pdf" download="Competencias Ciudadanas - Pregunta 2.pdf">Descargar Pregunta 2 - Competencias Ciudadanas</a></h1>
+                    <br />
+                    <h1> <a href="~/Content/Doc_DCO/Competencias_ciudadanas-Pregunta3.pdf" download="Competencias Ciudadanas - Pregunta 3.pdf">Descargar Pregunta 3 - Competencias Ciudadanas</a></h1>
+                    <br />
+                    <h1> <a href="~/Content/Doc_DCO/Competencias_ciudadanas-Pregunta4.pdf" download="Competencias Ciudadanas - Pregunta 4.pdf">Descargar Pregunta 4 - Competencias Ciudadanas</a></h1>
+                    <br />
+                    <h1> <a href="~/Content/Doc_DCO/Competencias_ciudadanas-Pregunta5.pdf" download="Competencias Ciudadanas - Pregunta 5.pdf">Descargar Pregunta 5 - Competencias Ciudadanas</a></h1>
+                    <br />
+                    <h1> <a href="~/Content/Doc_DCO/Ingles-Pregunta1_y_2.pdf" download="Ingles - Pregunta 1 y 2.pdf">Descargar Pregunta 1 y 2 - Ingles</a></h1>
+                    <br />
+                    <h1> <a href="~/Content/Doc_DCO/Lectura_critica-Pregunta1.pdf" download="Lectura Critica - Pregunta 1.pdf">Descargar Pregunta 1 - Lectura Critica</a></h1>
+                    <br />
+                    <h1> <a href="~/Content/Doc_DCO/Lectura_critica-Preguntas2_3_y_4.pdf" download="Lectura Critica - Pregunta 2 3 y 4.pdf">Descargar Pregunta 2, 3 y 4 - Lectura Critica</a></h1>
+                    <br />
+                    <h1> <a href="~/Content/Doc_DCO/Lectura_critica-Pregunta5.pdf" download="Lectura Critica - Pregunta 5.pdf">Descargar Pregunta 5 - Lectura Critica</a></h1>
+                    <br />
+                    <h1> <a href="~/Content/Doc_DCO/Razonamiento_Cuantitativo-Pregunta5.pdf" download="Razonamiento Cuantitativo - Pregunta 5.pdf">Descargar Pregunta 5 - Razonamiento Cuantitativo</a></h1>*@
+            <div class="row">
+                <div class="col-md-3"></div>
+               
+                    @if (Model.contador == Model.initial)
+                    {
+                        <div class="col-md-6" style="text-align:center">
+                            <a class="boton" href="@Url.Action("Question", "ViewGameUser")">¡COMENZAR!</a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-md-6" style="text-align:center">
+                            <a class="boton" onclick="eliminarCookies()";>Haz finalizado. Regresa a la plataforma.</a>
+                        </div>
+                    }
+                
+                <div class="col-md-3"></div>
+            </div>
+                <br />
+            </div>
         </div>
+        <div class="col-md-3"></div>
     </div>
-    <div class="preguntas2 col-md-4" style="left:480px;">
+    @*Se agrega etiqueta en "display:none" para ocultar el div en la vista principal*@
+    <div class="preguntas2 col-md-4" style="left:480px; display:none">
         <br /><br /><br /><br />
         @while (Model.initial < Model.countquestion)
         {
@@ -364,8 +421,8 @@
     </div>
 
     <div class="col-md-4"></div>
-
-    <div class="col-md-4" style="left:100px;">
+    @*Se agrega etiqueta en "display:none" para ocultar el div en la vista principal*@
+    <div class="col-md-4" style="left:100px; display:none">
         <div class="col-md-3" style="background:url(../../ResourceGame/Niveles.png);background-repeat: no-repeat;width:310px;height:135px;">
             <br /><br /><br /><br /><br />
             <h7><span id="seg" style="font-size:60px;">@Model.attemptUser de 3</span></h7>

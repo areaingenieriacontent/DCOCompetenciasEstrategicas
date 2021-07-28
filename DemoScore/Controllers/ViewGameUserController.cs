@@ -175,9 +175,9 @@ namespace DemoScore.Controllers
         }
 
         [Authorize]
-        public ActionResult Question()
+        public ActionResult Question(int? id)
         {
-            //int level = 0;
+            //int level = 0;            
             var useractual = ApplicationDbContext.Users.Find(GetActualUserId().Id);
             var company = ApplicationDbContext.Companies
                 .Join(ApplicationDbContext.Categorias,
@@ -193,6 +193,7 @@ namespace DemoScore.Controllers
                         com => com.CompanyId,
                         (u, com) => new { u, com })
                         .Where(us => us.com.Id == useractual.Id).FirstOrDefault();
+            var settid = ApplicationDbContext.MG_SettingMps.Where(x => x.Company_Id == useractual.CompanyId).FirstOrDefault().Sett_Id;
             var nivelattemp = 1;
             var temp = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id).OrderByDescending(x => x.AnUs_Id).ToList();
             var b2 = temp.FirstOrDefault();
@@ -200,91 +201,104 @@ namespace DemoScore.Controllers
             {
                 nivelattemp = b2.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id;
             }
-            // numero de preguntas de la empresa en ese nivel
-            var counquestionnivel = ApplicationDbContext.MG_MultipleChoices.Where(x => x.Nivel_Id == nivelattemp && x.Sett_Id == company.u.mc.Sett_Id).Count();
-            // numero de preguntas respondidas por el usuario en ese nivel
-            var countattempnivel = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id && x.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id == nivelattemp).Count();
-            if (countattempnivel >= counquestionnivel)
+            // numero de preguntas de la compañia (empresa)
+            var countquestioncompany = ApplicationDbContext.MG_MultipleChoices.Where(x => x.Sett_Id == company.u.mc.Sett_Id).Count();
+            // numero de respuestas guardadas por el usuario
+            var countanswerquestion = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id).Count();
+            if( countquestioncompany != countanswerquestion)
             {
-                nivelattemp = nivelattemp + 1;
-            }
-            var attempts = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id && x.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id == nivelattemp).OrderByDescending(x => x.AnUs_Id).ToList();
-            var setting = ApplicationDbContext.MG_SettingMps.First(x => x.Company_Id == useractual.CompanyId);
-            setting.MG_MultipleChoice = ApplicationDbContext.MG_MultipleChoices.Where(x => x.Nivel_Id == nivelattemp && x.Sett_Id == setting.Sett_Id).ToList();
-            //var attempts = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id).OrderByDescending(x => x.AnUs_Id).ToList();
-            List<MultipleChoiceselect> listselect = new List<MultipleChoiceselect>();
-            List<MultipleChoiceselect> listselectEditado = new List<MultipleChoiceselect>();
-            List<MultipleChoiceselect> listselect2 = new List<MultipleChoiceselect>();
-            List<MultipleChoiceselect> listselect3 = new List<MultipleChoiceselect>();
-            List<MultipleChoiceselect> listselect4 = new List<MultipleChoiceselect>();
-            List<MultipleChoiceselect> listselect5 = new List<MultipleChoiceselect>();
-            List<MultipleChoiceselect> ListFinalfacil = new List<MultipleChoiceselect>();
-            var categoria = ApplicationDbContext.Categorias.Where(x => x.Company_Id == useractual.CompanyId).ToList();
-            var consultaHechas = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id).ToList();
-            var PreguntasID = ApplicationDbContext.MG_AnswerMultipleChoices.ToList();
-            List<int> IdPreguntas = new List<int>();
 
-            foreach (var itemConsultas in consultaHechas)
-            {
-                foreach (var PreguntaID in PreguntasID)
+            
+                // numero de preguntas de la empresa en ese nivel
+                var counquestionnivel = ApplicationDbContext.MG_MultipleChoices.Where(x => x.Nivel_Id == nivelattemp && x.Sett_Id == company.u.mc.Sett_Id).Count();
+                // numero de preguntas respondidas por el usuario en ese nivel
+                var countattempnivel = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id && x.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id == nivelattemp).Count();
+                if (countattempnivel >= counquestionnivel)
                 {
-                    if (itemConsultas.AnMul_ID == PreguntaID.AnMul_ID)
+                    nivelattemp = nivelattemp + 1;
+                }
+                var attempts = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id && x.MG_AnswerMultipleChoice.MG_MultipleChoice.Nivel_Id == nivelattemp).OrderByDescending(x => x.AnUs_Id).ToList();
+                var setting = ApplicationDbContext.MG_SettingMps.First(x => x.Company_Id == useractual.CompanyId);
+                setting.MG_MultipleChoice = ApplicationDbContext.MG_MultipleChoices.Where(x => x.Nivel_Id == nivelattemp && x.Sett_Id == setting.Sett_Id).ToList();
+                //var attempts = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id).OrderByDescending(x => x.AnUs_Id).ToList();
+                List<MultipleChoiceselect> listselect = new List<MultipleChoiceselect>();
+                List<MultipleChoiceselect> listselectEditado = new List<MultipleChoiceselect>();
+                List<MultipleChoiceselect> listselect2 = new List<MultipleChoiceselect>();
+                List<MultipleChoiceselect> listselect3 = new List<MultipleChoiceselect>();
+                List<MultipleChoiceselect> listselect4 = new List<MultipleChoiceselect>();
+                List<MultipleChoiceselect> listselect5 = new List<MultipleChoiceselect>();
+                List<MultipleChoiceselect> ListFinalfacil = new List<MultipleChoiceselect>();
+                var categoria = ApplicationDbContext.Categorias.Where(x => x.Company_Id == useractual.CompanyId).ToList();
+                var consultaHechas = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == useractual.Id).ToList();
+                var PreguntasID = ApplicationDbContext.MG_AnswerMultipleChoices.ToList();
+                List<int> IdPreguntas = new List<int>();
+
+                foreach (var itemConsultas in consultaHechas)
+                {
+                    foreach (var PreguntaID in PreguntasID)
                     {
-                        IdPreguntas.Add(PreguntaID.MuCh_ID);
+                        if (itemConsultas.AnMul_ID == PreguntaID.AnMul_ID)
+                        {
+                            IdPreguntas.Add(PreguntaID.MuCh_ID);
+                        }
+                    }
+
+                }
+
+                int[] IdPreguntasSinRepetir = IdPreguntas.Distinct().ToArray();
+
+                foreach (var item in categoria)
+                {
+                    /// cambio aqui de la condicion quetion
+                    foreach (var item1 in setting.MG_MultipleChoice.Where(X => X.Cate_Id == item.Cate_ID && X.Nivel_Id == nivelattemp))
+                    {
+
+                        listselect.Add(new MultipleChoiceselect
+                        {
+                            Sett_Id = item1.Sett_Id,
+                            MuCh_ID = item1.MuCh_ID,
+                            MuCh_NameQuestion = item1.MuCh_NameQuestion,
+                            MuCh_Description = item1.MuCh_Description,
+                            MuCh_ImageQuestion = item1.MuCh_ImageQuestion,
+                            Cate_Id = item1.Cate_Id,
+                            listanswerM = item1.MG_AnswerMultipleChoice.ToList(),
+                            nivel = item1.Nivel_Id,
+                            Contexto = item1.MG_Context
+
+                        });
+
+                    }
+
+                }
+                listselectEditado = new List<MultipleChoiceselect>(listselect);
+                foreach (var Repetidas in IdPreguntasSinRepetir)
+                {
+                    foreach (var item1 in listselectEditado)
+                    {
+                        if (Repetidas == item1.MuCh_ID)
+                        {
+                            listselect.Remove(item1);
+                        }
                     }
                 }
-
-            }
-
-            int[] IdPreguntasSinRepetir = IdPreguntas.Distinct().ToArray();
-
-            foreach (var item in categoria)
-            {
-                /// cambio aqui de la condicion quetion
-                foreach (var item1 in setting.MG_MultipleChoice.Where(X => X.Cate_Id == item.Cate_ID && X.Nivel_Id == nivelattemp))
+                var rnd = new Random();
+                var randomselect = listselect.OrderBy(x => rnd.Next()).ToList();
+                var Newlistselect = randomselect.Take(1);
+                ListFinalfacil = new List<MultipleChoiceselect>(Newlistselect);
+                // }
+                Session["Date"] = DateTime.Now;
+                QuestionSelect model1 = new QuestionSelect
                 {
-
-                    listselect.Add(new MultipleChoiceselect
-                    {
-                        Sett_Id = item1.Sett_Id,
-                        MuCh_ID = item1.MuCh_ID,
-                        MuCh_NameQuestion = item1.MuCh_NameQuestion,
-                        MuCh_Description = item1.MuCh_Description,
-                        MuCh_ImageQuestion = item1.MuCh_ImageQuestion,
-                        Cate_Id = item1.Cate_Id,
-                        listanswerM = item1.MG_AnswerMultipleChoice.ToList(),
-                        nivel = item1.Nivel_Id,
-                        Contexto = item1.MG_Context
-
-                    });
-
-                }
-
+                    Sett_Id = setting.Sett_Id,
+                    listquestionsselect = ListFinalfacil,
+                    setting = setting,
+                };
+                return View(model1);
             }
-            listselectEditado = new List<MultipleChoiceselect>(listselect);
-            foreach (var Repetidas in IdPreguntasSinRepetir)
+            else 
             {
-                foreach (var item1 in listselectEditado)
-                {
-                    if (Repetidas == item1.MuCh_ID)
-                    {
-                        listselect.Remove(item1);
-                    }
-                }
+                return RedirectToAction("Instructions", new { Id = settid});
             }
-            var rnd = new Random();
-            var randomselect = listselect.OrderBy(x => rnd.Next()).ToList();
-            var Newlistselect = randomselect.Take(1);
-            ListFinalfacil = new List<MultipleChoiceselect>(Newlistselect);
-            // }
-            Session["Date"] = DateTime.Now;
-            QuestionSelect model1 = new QuestionSelect
-            {
-                Sett_Id = setting.Sett_Id,
-                listquestionsselect = ListFinalfacil,
-                setting = setting,
-            };
-            return View(model1);
         }
         [Authorize]
         public ActionResult AnswerQuestions(int id)
@@ -294,6 +308,26 @@ namespace DemoScore.Controllers
             DateTime fechaenvio = DateTime.Now;
             var user = ApplicationDbContext.Users.Find(GetActualUserId().Id);
             var answer = ApplicationDbContext.MG_AnswerMultipleChoices.Find(id);
+            var company = ApplicationDbContext.Companies
+                .Join(ApplicationDbContext.Categorias,
+                        c => c.CompanyId,
+                        cat => cat.Company_Id,
+                        (c, cat) => new { c, cat })
+                .Join(ApplicationDbContext.MG_MultipleChoices,
+                        mch => mch.cat.Cate_ID,
+                        mc => mc.Cate_Id,
+                        (mch, mc) => new { mch, mc })
+                .Join(ApplicationDbContext.Users,
+                        u => u.mch.c.CompanyId,
+                        com => com.CompanyId,
+                        (u, com) => new { u, com })
+                        .Where(us => us.com.Id == user.Id).FirstOrDefault();
+            // numero de preguntas de la compañia (empresa)
+            var countquestioncompany = ApplicationDbContext.MG_MultipleChoices.Where(x => x.Sett_Id == company.u.mc.Sett_Id).Count();
+            // numero de respuestas guardadas por el usuario
+            var countanswerquestion = ApplicationDbContext.MG_AnswerUsers.Where(x => x.User_Id == user.Id).Count();
+            if (countquestioncompany != countanswerquestion) 
+            { 
             if (ValidQuestion(id) == true)
             {
                 var a = ApplicationDbContext.MG_AnswerMultipleChoices.Where(x => x.MuCh_ID == answer.MuCh_ID).ToList();
@@ -461,11 +495,16 @@ namespace DemoScore.Controllers
 
                 }
                 ApplicationDbContext.SaveChanges();
-                return RedirectToAction("Instructions", new { Id = answer.MG_MultipleChoice.Sett_Id });
+                return RedirectToAction("Question", "ViewGameUser");
             }
             else
             {
                 TempData["ultimo"] = "¡Ya has respondido esta pregunta!";
+                return RedirectToAction("Instructions", new { Id = answer.MG_MultipleChoice.Sett_Id });
+            }
+            }
+            else
+            {
                 return RedirectToAction("Instructions", new { Id = answer.MG_MultipleChoice.Sett_Id });
             }
         }

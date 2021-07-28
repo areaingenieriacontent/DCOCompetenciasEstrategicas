@@ -16,6 +16,12 @@ namespace DemoScore.Models.Game
         [Display(Name = "Descripción Contexto")]
         public string Contex_Desc { get; set; }
 
+        [Display(Name = "Nombre Competencia")]
+        public string Contex_Compet { get; set; }
+
+        [Display(Name = "Fuente o Autor")]
+        public string Contex_Autor { get; set; }
+
         public virtual ICollection<MG_MultipleChoice> MG_MultipleChoice { get; set; }
     }
 }

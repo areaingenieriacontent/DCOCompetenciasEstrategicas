@@ -144,7 +144,26 @@
     -ms-animation-delay: 27s;
     animation-delay: 20s; 
 }
+.Contexto_Preg {
+    height: 200px;
+    overflow-y: scroll;
+    width: 1040px;
+    text-align:left;
+}
+    .Contexto_Preg h2{
+        text-align:center;
+    }
 
+.boton {
+    border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+    padding: 10px; /*espacio alrededor texto*/
+    background-color: #2e518b; /*color botón*/
+    color: #ffffff; /*color texto*/
+    text-decoration: none; /*decoración texto*/
+    text-transform: uppercase; /*capitalización texto*/
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    border-radius: 50px; /*bordes redondos*/
+}
 /* Animation for the slideshow images */
 @-webkit-keyframes imageAnimation { 
     0% { opacity: 0;

@@ -29,7 +29,7 @@
     <li style="background-color: #B0002D; height: 80px; align-content: center;">
         @Html.ActionLink("Hola " + Session["FirstName"] + " " + Session["LastName"] + "!", "", "", routeValues: null, htmlAttributes: new { title = "Manage", @style = "background-color:transparent;color:#fff;" })
     </li>
-    @*<li>
+    <li>
         <img src="~/Content/Imagenes/logout.png" height="80" style="
             padding-bottom: 10px;
             padding-top: 20px;
@@ -39,7 +39,7 @@
     <li>
         <a href="javascript:document.getElementById('logoutForm').submit()" style="background-color: transparent;
         color: #fff;">Cerrar Sesión</a>
-    </li>*@
+    </li>
 </ul>
             }
             }
