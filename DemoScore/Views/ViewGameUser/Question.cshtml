@@ -2,6 +2,7 @@
 @model QuestionSelect
 @Scripts.Render("~/bundles/jqueryval")
 @Scripts.Render("~/Scripts/Chart.js")
+@Styles.Render("~/Content/style1.css")
 @if (TempData["Info"] != null)
 {
     @section Scripts {
@@ -31,13 +32,13 @@
     </div>
 </div>
 <body style="background:url(../ImgTemplate/@Model.setting.MG_Template.Plant_Img_Questions); background-size: cover;background-position: center center;background-repeat: no-repeat;background-attachment: fixed;">
-    <br /><br /><br /><br /><br /><br />
+    <br /><br /><br />
     @using (Html.BeginForm("AnswerQuestions", "ViewGameUser", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
     {
-            if (Model.setting.Sett_Audio4 != null)
-            {
-                <!--<audio src="~/ResourceGame/@Model.setting.Sett_Audio4" autoplay loop></audio>-->
-            }
+        if (Model.setting.Sett_Audio4 != null)
+        {
+            <!--<audio src="~/ResourceGame/@Model.setting.Sett_Audio4" autoplay loop></audio>-->
+        }
 
         for (int i = 0; i < Model.listquestionsselect.Count; i++)
         {
@@ -45,10 +46,25 @@
                 <div style="background:url('../ImgTemplate/CUADROPREGUNTA(3).png');background-repeat: no-repeat; width:1080px;height:440px;padding:10px;">
                     @if (@Model.listquestionsselect[i].MuCh_Description != null)
                     {
-                        <br /><br /><br /><br /><br /><br />
-                        <h1>@Html.Raw(@Model.listquestionsselect[i].Contexto.Contex_Desc)</h1>
+                        <br /><br /><br /><br /><br /><br/>
+                        <div class="Contexto_Preg">
+                            <h1 style="text-align:center;"><strong>@Model.listquestionsselect[i].Contexto.Contex_Compet</strong></h1><br />
+                            <h1>@Html.Raw(@Model.listquestionsselect[i].Contexto.Contex_Desc)</h1><br />
+                            @if (Model.listquestionsselect[i].Contexto.Contex_Autor != null)
+                            {
+                                <h1><strong>Tomado de: </strong>@Model.listquestionsselect[i].Contexto.Contex_Autor</h1>
+                                <br />
+                            }
+                        </div>
                         <br />
-                        <h1>@Model.listquestionsselect[i].MuCh_Description</h1>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <h1><strong>Pregunta: </strong></h1>
+                            </div>
+                            <div class="col-md-10" style="text-align:left">
+                                <h1>@Html.Raw(@Model.listquestionsselect[i].MuCh_Description)</h1>
+                            </div>
+                        </div>
                     }
                     else
                     {
@@ -63,37 +79,41 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="pruebas">
-                    <br />
-                    <a class="Select" href="#" onclick="UpdateModule('@Model.listquestionsselect[i].listanswerM[0].AnMul_ID')" data-cname="@Model.listquestionsselect[i].listanswerM[0].AnMul_ID"><h1>A. @Model.listquestionsselect[i].listanswerM[0].AnMul_Description</h1></a>
-                </div>
-            </div>
-            <br />
+            <div class="row">
                 <div class="col-md-6">
-                    <div class="pruebas3">
-                        <br />
+                    <div>
+                        <a class="Select" href="#" onclick="UpdateModule('@Model.listquestionsselect[i].listanswerM[0].AnMul_ID')" data-cname="@Model.listquestionsselect[i].listanswerM[0].AnMul_ID"><h1>A. @Model.listquestionsselect[i].listanswerM[0].AnMul_Description</h1></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
                         <a class="Select" href="#" onclick="UpdateModule('@Model.listquestionsselect[i].listanswerM[1].AnMul_ID')" data-cname="@Model.listquestionsselect[i].listanswerM[1].AnMul_ID"><h1>B. @Model.listquestionsselect[i].listanswerM[1].AnMul_Description</h1></a>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="pruebas2">
+            </div>
+            <div class="col-md-12">
+                <div class="jumbotron3">
+                    <div class="col-md-12">
                         <br />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
                         <a class="Select" href="#" onclick="UpdateModule('@Model.listquestionsselect[i].listanswerM[2].AnMul_ID')" data-cname="@Model.listquestionsselect[i].listanswerM[2].AnMul_ID"><h1>C. @Model.listquestionsselect[i].listanswerM[2].AnMul_Description</h1></a>
                     </div>
                 </div>
-                <br />
                 <div class="col-md-6">
-                    <div class="pruebas4">
-                        <br />
+                    <div>
                         <a class="Select" href="#" onclick="UpdateModule('@Model.listquestionsselect[i].listanswerM[3].AnMul_ID')" data-cname="@Model.listquestionsselect[i].listanswerM[3].AnMul_ID"><h1>D. @Model.listquestionsselect[i].listanswerM[3].AnMul_Description</h1></a>
                     </div>
                 </div>
-
+            </div>
         }
         <div class="jumbotron3">
             <div class="col-md-12">
-                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br />
             </div>
             <div class="col-md-12">
             </div>
